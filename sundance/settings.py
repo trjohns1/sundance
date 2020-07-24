@@ -25,7 +25,7 @@ SECRET_KEY = '-5yk8s8*c^&o10e@$+^!l79x@r6#(o@^fi^4ya%hm*)r=^*2uv'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['3.232.77.70', 'dev.sundancesystems.net']
+ALLOWED_HOSTS = ['3.232.77.70', 'dev.sundancesystems.net', '127.0.0.1']
 
 # Application definition
 
