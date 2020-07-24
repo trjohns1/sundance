@@ -1,0 +1,12 @@
+{% extends 'pinpoint/base.html' %}
+
+    {% block content %}
+    <h2>Create a Point Set</h2>
+    <form action="{% url 'pointset_create' %}" method='post' novalidate>
+        {% csrf_token %}
+        {{ form }}
+        <br>
+        <button type="button" class="btn btn-outline-secondary" onclick="window.history.back();">Cancel</button>
+        <input type="submit" value="Create" class="btn btn-primary">
+    </form>
+    {% endblock %}

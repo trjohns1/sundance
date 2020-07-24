@@ -1,0 +1,13 @@
+{% extends 'pinpoint/base.html' %}
+
+    {% block content %}
+    <h2>Update a Point Set</h2>
+    <form action="{% url 'pointset_update' %}" method='post' novalidate>
+        {% csrf_token %}
+        {{ form }}
+        {{form.non_field_errors}}
+        <br>
+        <button type="button" class="btn btn-outline-secondary" onclick="window.history.back();">Cancel</button>
+        <input type="submit" value="Update" class="btn btn-primary">
+    </form>
+    {% endblock %}

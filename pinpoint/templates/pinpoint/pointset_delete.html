@@ -1,0 +1,15 @@
+{% extends 'pinpoint/base.html' %}
+
+    {% block content %}
+    <h2>Delete a Point Set</h2>
+    <p>Delete Point Set: {{ name }} ?</p>
+    <form action="{% url 'pointset_delete' %}" method='post' novalidate>
+        <div class="form-group">
+            {% csrf_token %}
+            {{ form }}
+            {{form.non_field_errors}}
+            <button type="button" class="btn btn-outline-secondary" onclick="window.history.back();">Cancel</button>
+            <input type="submit" value="Delete" class="btn btn-primary">
+        </div><!-- /form-group -->
+    </form>
+    {% endblock %}
