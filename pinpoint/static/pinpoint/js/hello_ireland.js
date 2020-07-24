@@ -15,4 +15,3 @@ documentReady(function() {
     // alert("Hello Ireland!");
 });
 
-// Google Maps API Key: AIzaSyCteoDnjGZSN2Jze1xindy4jo3sy_sHcp4
