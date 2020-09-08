@@ -1,0 +1,7 @@
+Sundance Pinpoint To Do List
+
+2020.09.08
+
+1. Implement a secrets mechanism so that Google API key is not stored in source code.
+2. Implement map on point_update.html (optional) or a way to view all points in a set.
+3. Implement a way to download/export pointsets.
