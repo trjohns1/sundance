@@ -25,8 +25,9 @@
     <script>
         // Note: This example requires that you consent to location sharing when
         // prompted by your browser. If you see the error "The Geolocation service
-                        // failed.", it means you probably did not give permission for the browser to
+        // failed.", it means you probably did not give permission for the browser to
         // locate you.
+        // Also, the Google geolocation API requires https, otherwise it will give an error.
         var map, infoWindow, marker;
         function initMap() {
             map = new google.maps.Map(document.getElementById('map'), {
@@ -50,14 +51,14 @@
                     });
                     map.setCenter(pos);
                     // Capture initial marker position
-                    $('#lat').val(marker.getPosition().lat());
-                    $('#lng').val(marker.getPosition().lng());    
+                    $('#latitude').val(marker.getPosition().lat());
+                    $('#longitude').val(marker.getPosition().lng());    
                     // Create an event listener that captures the position of the marker as it is dragged.                
                     google.maps.event.addListener(marker,'position_changed',function(){
                         var lat = marker.getPosition().lat();
                         var lng = marker.getPosition().lng();
-                        $('#lat').val(lat);
-                        $('#lng').val(lng);
+                        $('#latitude').val(lat);
+                        $('#longitude').val(lng);
                     });
                 }, function() {
                     handleLocationError(true, infoWindow, map.getCenter());
