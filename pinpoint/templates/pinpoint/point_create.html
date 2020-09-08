@@ -51,14 +51,14 @@
                     });
                     map.setCenter(pos);
                     // Capture initial marker position
-                    $('#latitude').val(marker.getPosition().lat());
-                    $('#longitude').val(marker.getPosition().lng());    
+                    $('#id_latitude').val(marker.getPosition().lat());
+                    $('#id_longitude').val(marker.getPosition().lng());    
                     // Create an event listener that captures the position of the marker as it is dragged.                
                     google.maps.event.addListener(marker,'position_changed',function(){
                         var lat = marker.getPosition().lat();
                         var lng = marker.getPosition().lng();
-                        $('#latitude').val(lat);
-                        $('#longitude').val(lng);
+                        $('#id_latitude').val(lat);
+                        $('#id_longitude').val(lng);
                     });
                 }, function() {
                     handleLocationError(true, infoWindow, map.getCenter());
